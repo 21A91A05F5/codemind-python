@@ -1,25 +1,20 @@
-def count(num):
+def self_dividing(i):
+    p=i
+    h=0
     c=0
-    while num:
-        d=num%10
-        num//=10
-        c+=1
-    return c
-
-def fun(num):
-    p=0
-    h=num
-    while num:
-        d=num%10
-        num//=10
-        if d>0:
-            if h%d==0 :
-                p+=1
-    return p
+    while i :
+        d=i%10
+        i=i//10
+        h+=1
+        if d!=0 and p%d==0 :
+            c+=1
+    if h==c :
+        return 1
+    else:
+        return 0
 n=int(input())
 m=int(input())
 for i in range(n,m+1):
-    c=count(i)
-    k=fun(i)
-    if k==c:
+    k=self_dividing(i)
+    if k==1 :
         print(i,end=' ')
