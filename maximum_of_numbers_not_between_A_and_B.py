@@ -1,16 +1,14 @@
 n=int(input())
-s=list(map(int,input().split()))
-a,b=map(int,input().split())
+a=list(map(int,input().split()))
+x,y=map(int,input().split())
 c=0
-p=[]
-t=[]
-for i in range(a,b+1):
-    p.append(i)
-for i in s:
-    if i not in p:
-        t.append(i)
-        c=1
-if c==0 :
-    print("-1")
+d=[]
+for i in range(0,n):
+    if a[i]>=x and a[i]<=y:
+        pass
+    else:
+        d.append(a[i])
+if len(d)==0:
+    print('-1')
 else:
-    print(max(t))
+    print(max(d))
