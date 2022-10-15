@@ -1,20 +1,18 @@
-def nearestFibonacci(num):
-	if (num == 0):
-		print(0)
-	a=0
-	b=1
-	c=a+b
-	while (c<=num) :
-		a=b
-		b=c
-		c=a+b
-	if (abs(c-num)>abs(b-num)):
-		k=b
-	elif (abs(c-num)==abs(b-num)):
-		    print(b,c,end=' ')
-	else:
-		k=c
-	print(k)
-N=int(input())
-nearestFibonacci(N)
-
+def fib(n):
+    a,b=0,1
+    i=3
+    while True:
+        c=a+b
+        a,b=b,c
+        if b>n and (b-n)>(n-a):
+            print(a)
+            break
+        elif b>n and (b-n)<(n-a):
+            print(b)
+            break
+        elif b>n:
+            print(a,b)
+            break
+        i+=1
+n=int(input())
+fib(n)
