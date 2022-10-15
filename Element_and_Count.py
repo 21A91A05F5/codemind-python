@@ -1,7 +1,8 @@
 n=int(input())
-a=list(map(int,input().split()))
+l=list(map(int,input().split()))
 b=[]
-for i in a:
+for i in l :
     if i not in b:
         b.append(i)
-        print(i,a.count(i),end=' ')
+for i in b:
+    print(i,l.count(i),end=" ")
