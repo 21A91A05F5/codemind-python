@@ -1,26 +1,28 @@
-def ispalindrome(num):
-    m=num
-    rn=0
-    while(num):
-        d=num%10
-        num=num//10
-        rn=rn*10+d
-    if rn==m :
+def pal(n):
+    temp=n
+    rev=0
+    while n>0:
+        rev=rev*10+n%10
+        n//=10
+    if rev==temp:
         return True
     else:
         return False
-def clspalindrome(n):
-    sp=n-1
-    while(not(ispalindrome(sp))):
-        sp-=1
-    lp=n+1
-    while(not(ispalindrome(lp))):
-        lp+=1
-    if(abs(n-lp)>(abs(n-sp))):
-        print(sp)
-    elif(abs(n-lp)==(abs(n-sp))):
-        print(sp,lp,end=' ')
-    else:
-        print(lp)
 n=int(input())
-clspalindrome(n)
+i=n+1
+j=n-1
+while not pal(i) and not pal(j):
+    i+=1
+    j-=1
+if pal(i) and pal(j):
+    if abs(i-n)==abs(n-i):
+        print(j,i)
+    else:
+        if abs(i-n)>abs(n-j):
+            print(j)
+        else:
+            print(i)
+elif pal(i):
+    print(i)
+else:
+    print(j)
