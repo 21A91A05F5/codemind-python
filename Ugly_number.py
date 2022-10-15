@@ -1,19 +1,14 @@
-def is_ugly(n):
-    while n%2==0:
-        n=n//2
-    if n==1:
-        return True
-    while n%3==0:
-        n=n//3
-    if n==1:
-        return True
-    while n%5==0:
-        n=n//5
-    if n==1:
-        return True
-    return False
 n=int(input())
-if (is_ugly(n)):
-    print("Ugly Number")
-else:
-    print("Not Ugly Number")
+while(True):
+    if n%2==0:
+        n//=2
+    elif n%3==0:
+        n//=3
+    elif n%5==0:
+        n//=5
+    elif n==1:
+        print("Ugly Number")
+        break
+    else:
+        print("Not Ugly Number")
+        break
