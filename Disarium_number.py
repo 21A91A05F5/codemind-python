@@ -1,20 +1,15 @@
-def count(n):
-    k=0
-    while n:
-        d=n%10
-        n=n//10
-        k+=1
-    return k
-n=int(input())
-k=count(n)
-m=n
-r=0
+n = int(input())
+temp = n
+su,rev=0,0
 while n:
-    d=n%10
-    n=n//10
-    r=r+pow(d,k)
-    k-=1
-if r==m :
+    rev=rev*10+n%10
+    n//=10
+i = 1
+while rev:
+    su+=(rev%10)**i
+    rev//=10
+    i += 1
+if su==temp:
     print(True)
 else:
     print(False)
