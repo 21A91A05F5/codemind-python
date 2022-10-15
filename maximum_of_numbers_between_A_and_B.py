@@ -1,11 +1,11 @@
 n=int(input())
-s=list(map(int,input().split()))
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-c=[]
-for i in s:
-    if i in range(a,b+1):
-        c.append(i)
-if c!=[] :
-    print(max(c))
+N=[]
+for i in l:
+    if i>=a and i<=b:
+        N.append(i)
+if len(N)==0:
+    print(-1)
 else:
-    print("-1")
+    print(max(N))
