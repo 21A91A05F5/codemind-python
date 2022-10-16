@@ -1,13 +1,11 @@
-n=input()
+s=input()
 k=input()
-s="aeiouAEIOU"
-c=-1
-for i in range(len(n)):
-    if n[i]==k:
-        c=i
+p=0
+for i in range(len(s)):
+    if s[i]==k:
+        print(True)
+        print(i)
+        p=1
         break
-if(c>-1):
-    print(True)
-    print(c)
-else:
+if p!=1 :
     print(False)
