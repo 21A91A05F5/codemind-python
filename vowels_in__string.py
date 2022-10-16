@@ -1,12 +1,10 @@
-n=input()
-s="aeiouAEIOU"
-c=0
+s=input()
+v="AEIOUaeiou"
 b=[]
-for i in n:
-    if i in s and i not in b:
-        c=1
+for i in s:
+    if i in v and i not in b:
         b.append(i)
-if c==0 :
-    print("-1")
+if len(b)==0:
+    print(0)
 else:
     print(*b)
