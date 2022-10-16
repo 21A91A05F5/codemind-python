@@ -1,3 +1,6 @@
-n=input()
-for i in range(len(n)-1,-1,-1):
-    print(n[i],end='')
+s=input()
+s=s.split()
+for i in range(len(s)):
+    s[i]=s[i][::-1]
+s=s[::-1]
+print(*s)
