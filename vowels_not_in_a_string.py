@@ -1,15 +1,10 @@
-n=input()
-n=n.lower()
-s="aeiou"
-c=0
+s=input()
+v="aeiou"
 b=[]
-for i in n:
-    if i in s and i not in b:
-        c+=1
+for i in v:
+    if i not in s and i not in b:
         b.append(i)
-if(c<len(s)-1) :
-    for i in s:
-        if i not in b:
-            print(i,end=' ')
-if len(b)==len(s):
-    print("0")
+if len(b)==0:
+    print(0)
+else:
+    print(*b)
